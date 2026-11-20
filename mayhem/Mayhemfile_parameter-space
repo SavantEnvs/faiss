@@ -1,0 +1,9 @@
+project: savantenvs/faiss
+target: parameter-space
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parameter-space/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_parameter_space
+    libfuzzer: true
+    timeout: 10

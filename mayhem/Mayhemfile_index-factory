@@ -1,0 +1,9 @@
+project: savantenvs/faiss
+target: index-factory
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/index-factory/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_index_factory
+    libfuzzer: true
+    timeout: 10

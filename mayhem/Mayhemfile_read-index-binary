@@ -1,0 +1,8 @@
+project: savantenvs/faiss
+target: read-index-binary
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/read-index-binary/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_read_index_binary
+    libfuzzer: true

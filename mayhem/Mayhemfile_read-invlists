@@ -1,0 +1,8 @@
+project: savantenvs/faiss
+target: read-invlists
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/read-invlists/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_read_invlists
+    libfuzzer: true
